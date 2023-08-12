@@ -1,0 +1,492 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+body {
+
+    background: linear-gradient(to bottom, rgb(15, 15, 15), rgb(30, 30, 30));
+        background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.logo {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin: 0 15px;
+    font-weight: 600;
+    position: relative;
+}
+
+ul li a {
+    position: relative;
+}
+
+ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white; /* Change the background to white */
+    bottom: -2px;
+    left: 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+button {
+    margin-right: 20px;
+    background-color: rgb(21, 21, 21);
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+button a {
+    color: white;
+    font-size: 17px;
+}
+
+/* Additional CSS for the home section */
+/* Your existing CSS code */
+
+/* Additional CSS for the home section */
+/* Additional CSS for the home section */
+.home-section {
+    margin-top: 5rem;
+    padding: 0 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.home-text {
+    text-align: center;
+}
+
+.h1-home {
+    font-size: 35px;
+    transition: font-size 0.5s;
+    color: white;
+}
+
+.p-home {
+    margin-top: 1rem;
+    font-size: 25px;
+    color: rgb(198, 198, 198);
+    transition: font-size 0.5s;
+}
+
+.button-home {
+    margin-top: 2rem;
+}
+
+.button-home a {
+    margin-top: 3rem;
+    font-size: 20px;
+    font-weight: bold;
+    transition: font-size 0.5s;
+}
+
+span {
+    color: white;
+    font-weight: bold;
+}
+
+.home-img {
+    width: 25%;
+    margin-right: 0.9rem;
+    transition: width 0.5s, margin 0.5s;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .h1-home {
+        font-size: 30px;
+    }
+    .p-home {
+        font-size: 20px;
+    }
+
+    .button-home a {
+        font-size: 18px;
+    }
+
+    .home-img {
+        width: 55%;
+        margin-right: 0.5rem;
+    }
+}
+
+
+
+@media only screen and (max-width: 760px) {
+    ul {
+      display: none;
+    }
+    .homebtn {
+        display: none;
+    }
+  } /* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    
+    /* Hide the Discord button under 768px */
+}
+
+/* Additional CSS for the features section */
+.features-section {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.section-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    gap: 30px; /* Add space between cards */
+}
+
+.feature-card {
+    background-color: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: calc(33.33% - 60px); /* Distribute cards evenly with spacing */
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card i {
+    font-size: 60px;
+    color: #6301d2; /* Change the color to purple */
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    font-size: 18px;
+    color: rgb(170, 170, 170);
+    line-height: 1.5;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .features-container {
+        flex-direction: column; /* Stack cards under each other on small screens */
+        align-items: center; /* Center the cards horizontally */
+    }
+
+    .feature-card {
+        width: 80%; /* Adjust the width as needed */
+    }
+}
+/* Additional CSS for the products section */
+/* Additional CSS for the products section */
+.products-section {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.product-card {
+    background-color: #1f1e1e;
+    padding: 30px;
+    border-radius: 20px;
+    width: calc(28% - 40px); /* Four products per row on larger screens */
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 18px;
+    color: rgb(170, 170, 170);
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.buy-button {
+    background-color: #6301d2;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 1.2rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #8d5dc5;
+}
+
+.img-product {
+    border-radius: 10px;
+}
+
+.green {
+    color: rgb(13, 185, 13);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 80%; /* Adjust the width as needed */
+    }
+}
+
+.green {
+    color: rgb(13, 185, 13);
+}
+
+/* Additional CSS for the About Us section */
+
+
+.center {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 3rem;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    color: white;
+    text-align: center;
+  }
+  .column {
+    width: 100%;
+    padding: 0.5em 0;
+    box-sizing: border-box;
+  }
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  .card {
+    box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    color: white;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Poppins", sans-serif;
+    background-color: #1e1e1e;
+  }
+  .card .img-container {
+    width: 8em;
+    height: 8em;
+    background-color: #a993ff;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+  }
+  .card img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  .card h3 {
+    font-weight: 500;
+  }
+  .card p {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0.5em 0 2em 0;
+    letter-spacing: 2px;
+  }
+  .icons {
+    width: 50%;
+    min-width: 180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+  }
+  .card:hover {
+    background: linear-gradient(#6045ea, #8567f7);
+    color: #ffffff;
+  }
+  .card:hover .img-container {
+    transform: scale(1.15);
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 1em 7em;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em;
+    }
+    .card {
+      padding: 5em 1em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      padding: 0 1em;
+    }
+  }
+  .space-top {
+    margin-top: 3rem;
+  }
+
+  .faq-container {
+    max-width: 600px;
+    margin: 50px auto;
+  }
+  
+  .faq-item {
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .question {
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .answer {
+    padding: 0 15px 15px;
+    display: none;
+    color: rgb(188, 188, 188);
+  }
+  
+  .answer.show {
+    display: block;
+  }
+  
+  .dropdown-icon {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .opened .dropdown-icon::before {
+    content: "\f106";
+  }
+  
+  .closed .dropdown-icon::before {
+    content: "\f107";
+  }
+
+  .dropdown-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .opened .dropdown-icon {
+    transform: rotate(180deg);
+  }
+
+  .footerr {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
